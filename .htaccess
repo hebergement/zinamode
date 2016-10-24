@@ -1,1 +1,0 @@
- RewriteRule ^about$ about.html [L]
