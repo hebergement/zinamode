@@ -1221,15 +1221,12 @@ body .frame-line.left-frame {
 .primary-menu ul li {
   position: relative;
 }
-.primary-menu ul li a {
-  display: block;
-}
 .primary-menu > ul {
   line-height: 80px;
 }
 .primary-menu > ul > li {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .primary-menu > ul > li > a {
   font-size: 16px;
