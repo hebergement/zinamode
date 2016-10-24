@@ -1,4 +1,9 @@
 /*----------------------*/
+/* CSS ZINA MODE BY WD  */
+/*----------------------*/
+
+
+/*----------------------*/
 /*   FONTS INCLUDE      */
 /*----------------------*/
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,400italic,700");
@@ -1031,7 +1036,7 @@ body .frame-line.left-frame {
   line-height: 1em;
   color: #272727;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .logo span {
   position: relative;
@@ -1054,9 +1059,8 @@ body .frame-line.left-frame {
   padding-top: 0,2px;
   left: 0;
   width: 100%;
-  
   z-index: 555;
-  background-color: white;opacity: 0.8;
+  background-color: white;opacity: 10;
   transition: all 0.3s ease-in-out;
 }
 .header-wrap .logo {
@@ -1067,7 +1071,8 @@ body .frame-line.left-frame {
   position: fixed;
 }
 .header-fixed.fixedheader {
-  background-color: #fff;
+  background-color: white;
+    opacity: 0.8;
   padding-top: 0;
 }
 .header-scroll-up {
@@ -1435,9 +1440,6 @@ body .frame-line.left-frame {
 .filters-wrap a:not(.active):hover {
   color: #a5a5a5;
 }
-.filter-open .filters-wrap {
-  opacity: 1;
-  visibility: visible;
 }
 .filter-open .toggle-filter {
   color: #272727;
