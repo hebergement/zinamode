@@ -1430,11 +1430,11 @@ body .frame-line.left-frame {
   transition: width 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
 .filters-wrap a.active > span::after,
-.filters-wrap a:focus > span::after {
+.filters-wrap a:hover > span::after {
   width: 100%;
   opacity: 1;
 }
-.filters-wrap a:not(.active):focus {
+.filters-wrap a:not(.active):hover {
   color: #a5a5a5;
 }
 }
