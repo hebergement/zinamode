@@ -1446,9 +1446,9 @@ body .frame-line.left-frame {
     display: block;
     margin: 0 15px 10px;
   }
-      .filters-wrap a:focus > span::after {
+      .filters-wrap a:hover > span::after {
   width: 100%;
-  opacity: 1;
+  opacity: 0;
 }
 }
 .portfolio-masonry-wrapper {
