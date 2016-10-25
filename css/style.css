@@ -1446,6 +1446,10 @@ body .frame-line.left-frame {
     display: block;
     margin: 0 15px 10px;
   }
+      .filters-wrap a:focus > span::after {
+  width: 100%;
+  opacity: 1;
+}
 }
 .portfolio-masonry-wrapper {
   position: relative;
