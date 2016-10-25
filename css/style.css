@@ -1434,7 +1434,7 @@ body .frame-line.left-frame {
   width: 100%;
   opacity: 1;
 }
-.filters-wrap a:not(.active):hover {
+.filters-wrap a:not(.active):focus {
   color: #a5a5a5;
 }
 }
