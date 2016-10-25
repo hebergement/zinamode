@@ -1446,8 +1446,6 @@ body .frame-line.left-frame {
     display: block;
     margin: 0 15px 10px;
   }
-      .filter-open .filters-wrap:hover{display:block;}
-}
 }
 .portfolio-masonry-wrapper {
   position: relative;
