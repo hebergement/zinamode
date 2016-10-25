@@ -1446,10 +1446,6 @@ body .frame-line.left-frame {
     display: block;
     margin: 0 15px 10px;
   }
-      .filters-wrap a:hover > span::after {
-  width: 100%;
-  opacity: 0;
-}
 }
 .portfolio-masonry-wrapper {
   position: relative;
