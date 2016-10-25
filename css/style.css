@@ -1442,7 +1442,7 @@ body .frame-line.left-frame {
   color: #272727;
 }
 @media (max-width: 33.9em) {
-  .filters-wrap a {
+  .filters-wrap a:not(active):focus {
     display: block;
     margin: 0 15px 10px;
   }
