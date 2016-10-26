@@ -738,6 +738,7 @@ textarea {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
+    padding-top: 50px;
 }
 .page-error i {
   position: relative;
@@ -752,10 +753,13 @@ textarea {
   transform: rotateY(180deg);
 }
 .page-error .error-title {
-  margin: 20px 0;
+  margin: 30px 0;
+    line-height: 150%;
 }
 .page-error .error-description {
   margin: 0;
+  line-height: 260%;
+    font-size: 18px;
 }
 .previous-post,
 .next-post,
