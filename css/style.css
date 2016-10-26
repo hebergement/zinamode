@@ -1434,7 +1434,7 @@ body .frame-line.left-frame {
   transition: width 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
 .filters-wrap a.active > span::after,
-.filters-wrap a:hover > span::after {
+.filters-wrap a.active > span::after {
   width: 100%;
   opacity: 1;
 }
