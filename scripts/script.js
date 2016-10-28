@@ -1,5 +1,5 @@
 // ******************************//
-// Author : Wdrissi
+// Author : VLThemes
 // ******************************//
 
 jQuery.noConflict()(function ($) {
@@ -505,11 +505,6 @@ $(document).ready(function() {
             $('body').removeClass('loading-end');
        });
     }
-
-
-
-
-
     // ******************************//
     // Image SLider
     // ******************************//
@@ -632,63 +627,6 @@ $(document).ready(function() {
     // ******************************//
 
     vl_toggle_map();
-
-
-    function initialize_map() {
-
-
-        var map;
-        $('#map').each(function() {
-            var $t = $(this),
-                mapZoom = 15,
-                mapLat = $t.attr("data-lat"),
-                mapLng = $t.attr("data-lng");
-            if ($t.attr("data-zoom") !== undefined) {
-                mapZoom = parseInt($t.attr("data-zoom"), 10);
-            }
-            // Create an array of styles.
-            var styles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
-            
-            // Create a new StyledMapType object, passing it the array of styles,
-            // as well as the name to be displayed on the map type control.
-            var styledMap = new google.maps.StyledMapType(styles, {
-                name: "Styled Map"
-            });
-            var myLatLng = new google.maps.LatLng(mapLat, mapLng);
-            var mapOptions = {
-                zoom: mapZoom,
-                center: myLatLng,
-                scrollwheel: true,
-                panControl: false,
-                zoomControl: true,
-                zoomControlOptions: {
-                    position: google.maps.ControlPosition.RIGHT_TOP
-                },
-                scaleControl: false,
-                mapTypeControl: false,
-                streetViewControl: false,
-                mapTypeControlOptions: {
-                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                }
-            };
-            map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                tittle: 'Omnia',
-                icon: 'img/map_marker.png',
-                animation: google.maps.Animation.DROP
-            });
-            map.mapTypes.set('map_style', styledMap);
-            map.setMapTypeId('map_style');
-        });
-
-    }
-
-    if ($('#map').length) {
-        google.maps.event.addDomListener(window, 'load', initialize_map);
-    }
-
 
     /************************/
     // Sticky Sidebar
