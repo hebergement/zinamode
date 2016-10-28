@@ -2673,4 +2673,84 @@ body .frame-line.left-frame {
   }
 }
 
+/*----------------------*/
+/*   LECTEUR          */
+/*----------------------*/
+.lecteur-fixed{
+    width: 100%;
+    position: fixed;
+    top:356px;
+    left: 20px;
+    opacity: 0.9;
+}
+.pullout {
+  background-color: #eee;
+  position: absolute;
+  padding: 0;
+  -moz-transition: -moz-transform 1s ease-in-out 0.5s;
+  -o-transition: -o-transform 1s ease-in-out 0.5s;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -webkit-transition-delay: 0.5s;
+  -webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+  transition: -webkit-transform 1s ease-in-out 0.5s;
+  transition: transform 1s ease-in-out 0.5s;
+  transition: transform 1s ease-in-out 0s, -webkit-transform 1s ease-in-out 0s;
+}
+.pullout:after {
+  content: attr(data-name);
+  display: block;
+  position: absolute;
+  background-color: #ddd;
+  font-size: 17px;
+  height: 26px;
+  line-height: 25px;
+  padding: 0;
+  width: 320%;
+  text-align: center;
+  top: 36%;
+  left: 0;
+    
+}
+.pullout-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+    width: auto;
+}
+.pullout-left:after {
+  left: -64px;
+  -webkit-transform: rotate(90deg) translateY(-57px);
+          transform: rotate(90deg) translateY(-57px);
+  border-radius: 5px 5px 0 0;
+}
 
+.pullout.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+button{ border:none; cursor:pointer; outline:none ; }
+    button{
+        background-color:#666;
+        display: block;
+        color: white;
+        height: relative;
+        width: relative;
+        font-size: 15px;
+    }
+    button#playpausebtn{
+        color: #ff1939;
+    }
+@media (max-width: 49.9em){
+    .lecteur-fixed{
+        left:0px;
+    }
+    button{
+       height: 30px;
+        width: 30px;
+        font-size: 10px;
+    }
+    .pullout:after{
+        top:35%;
+        width: 301%;
+        left: -59px;
+}
