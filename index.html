@@ -76,7 +76,7 @@
 
 									</li>
 									<li>
-										<a href="works_3col" class="animsition-link">
+										<a href="articles" class="animsition-link">
 											<span>Nos Articles</span>
 										</a>
 
@@ -86,7 +86,7 @@
 										</a>
 									</li>
                                     <li>
-										<a href="features.html" class="animsition-link">
+										<a href="services.html" class="animsition-link">
 											<span>La Marque</span>
 										</a>
 									</li>
@@ -370,8 +370,27 @@
 					<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
 				</div>
 				<!-- END REVOLUTION SLIDER -->
-
+                
 				<footer>
+                    
+                    <!--SON LECTEUR-->
+                <header class="lecteur-fixed header-wrap ">
+                    <div class="pullout pullout-left col-xs-2" data-name="Lecteur">
+                        <div>
+                           <button id="playpausebtn">
+                                <i class="fa fa-fw fa-play"></i>
+                           </button>
+                           <button id="stopbtn" >
+                               <i class="fa fa-fw fa-pause"></i>
+                           </button>        
+                           <button id="mutebtn">
+                               <i class="fa fa-fw fa-volume-off"></i>
+                           </button>
+                        </div>
+                    </div>
+                </header>
+                    
+                    
 					<div class="footer">
 						<div class="container">
 							<div class="text-center">
@@ -389,13 +408,13 @@
 										<i class="fa fa-fw fa-facebook"></i>
 									</a>
 									<a href="#" target="_blank">
-										<i class="fa fa-fw fa-dribbble"></i>
+										<i class="fa fa-fw fa-instagram"></i>
 									</a>
 									<a href="#" target="_blank">
 										<i class="fa fa-fw fa-google-plus"></i>
 									</a>
 								</div>
-								<div class="scroll-top" style="margin-top:20px;" >go to top</div>
+								<div class="scroll-top" style="margin-top:20px;" >Haut de page</div>
                                 <br>
                                 <p class="copy" style="font-size:12px;margin-top:-10px;" >
 									Design &amp; Development by
@@ -508,7 +527,7 @@
 						.revolution({
 							autoHeight            : "off",
 							debugMode             : false,
-							delay                 : 9000,
+							delay                 : 5000,
 							disableProgressBar    : "on",
 							dottedOverlay         : "none",
 							fallbacks             : {
@@ -548,29 +567,64 @@
 			});
 		</script>
 
+<!--- SON LECTEUR -->
+    <script>
+var audio, playbtn, mutebtn, seek_bar;
+function initAudioPlayer(){
+	audio = new Audio();
+	audio.src = "bensound-sexy.mp3";
+	audio.loop = true;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	mutebtn = document.getElementById("mutebtn");
+    stopbtn = document.getElementById("stopbtn")
+	// Add Event Handling
+	playbtn.addEventListener("click", playPause);
+	mutebtn.addEventListener("click", mute);
+    stopbtn.addEventListener("click", stop);
+	// Functions
+	function playPause(){
+		if(audio.paused){
+		    audio.play();
+            playbtn.style.color= "#ff1939";
+            stopbtn.style.color= "white";
+	    } else {
+		    audio.pause();
+            playbtn.style.color = "white";
+            stopbtn.style.color = "#ff1939";
+	    }
+	}
+	function mute(){
+		if(audio.muted){
+		    audio.muted = false;
+            mutebtn.style.color = "white"
+	    } else {
+		    audio.muted = true;
+		    mutebtn.style.color = "#ff1939"
+	    }
+	}
+    function stop(){
+		if(audio.stopped){
+		    audio.stopped = false;
+            stopbtn.style.color= "#ff1939"
+	    } else {
+		    audio.pause();
+            playbtn.style.color = "white";
+            stopbtn.style.color = "#ff1939";
+	    }
+	}
+}
+window.addEventListener("load", initAudioPlayer);
+</script>
+    
 		<!-- CUSTOM SCRIPT -->
 		<script src="scripts/script.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- AUDIO SCRIPT -->
+        <script src='vendors/jquery-1.12.0.min.js'></script>
+        <script src='vendors/bootstrap.min.js'></script>
+        <script src="scripts/index.js"></script>
 </body>
+
 
 </html>
