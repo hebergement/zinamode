@@ -1,5 +1,5 @@
 // ******************************//
-// Scrypt Zina Mode
+// Author : VLThemes
 // ******************************//
 
 jQuery.noConflict()(function ($) {
