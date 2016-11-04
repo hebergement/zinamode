@@ -1,0 +1,273 @@
+/*----------------------*/ 
+/*   FONTS INCLUDE      */ 
+/*----------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,400italic,700')
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400italic')
+
+
+$f1 = 'Josefin Sans', sans-serif
+$f2 = 'PT Serif', serif
+
+$white = #ffffff
+$black = #272727
+$lwhite = #fafafa
+$dwhite = #f2f2f2
+$gray = #555555
+$lgray = #a5a5a5
+$color = #ff1939
+
+/*----------------------*/ 
+/*   GENERAL            */ 
+/*----------------------*/
+	
+body
+	background-color $white
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	position relative
+	min-width 320px
+	font-family $f1
+	font-size 16px
+	line-height 1.8em
+	color $black
+
+h1, h2, h3, h4, h5, h6
+	text-rendering optimizeLegibility
+	padding 0
+	margin-top 6px
+	margin-bottom 10px
+	line-height 1.3em
+	letter-spacing 0px
+	color $black
+	font-weight 600
+	
+h1
+	font-size 34px
+
+h2
+	font-size 30px
+
+h3
+	font-size 28px
+	
+h4
+	font-size 22px
+
+h4.description
+	font-weight 400
+	opacity .6
+	font-size 20px
+
+h5
+	font-size 18px
+	
+h6
+	font-size 14px
+
+img
+	max-width 100%
+	height auto
+	vertical-align middle
+	
+blockquote
+	font-style italic
+	padding-left 40px
+	margin-bottom 25px
+	position relative
+	font-family $f2
+	color $lgray
+	font-size 18px
+	line-height 28px
+	&::before
+		content '\e67e'
+		font-family 'themify'
+		color $color
+		position absolute
+		top 0
+		left 0
+		font-size 24px
+	
+p
+	margin 0 0 25px
+	
+strong, b
+	font-weight 600
+
+ul,
+ol
+	padding 0 0 0 20px
+	&.list-none
+		list-style-type none
+		padding 0
+
+ul
+	list-style square outside none
+
+ol
+	list-style decimal outside none
+
+.sep
+	line-height 24px
+	display inline-block
+	width 20px
+		
+a
+	color inherit
+	line-height inherit
+	text-decoration none
+	transition all .3s ease-in-out
+	&:hover, &:focus, &:active
+		text-decoration none
+		outline none
+		color inherit
+
+.field-list
+	position relative
+	margin 0 0 25px
+
+pre
+	overflow auto
+	clear both
+	position relative
+	max-width 100%
+	margin 0 0 20px 0
+	background-color $dwhite
+	padding 20px 40px 20px 20px
+	font-family monospace
+	white-space pre-wrap
+	color inherit
+	&::after
+		content '\f121'
+		position absolute
+		padding 2px 0 0 0
+		width 20px
+		top 0
+		right 0
+		height 100%
+		font-size 10px
+		background-color $black
+		color $white
+		font-family 'FontAwesome'
+		text-align center
+
+dl
+	margin-bottom 20px
+
+dt
+	font-weight 600
+	color $black
+	text-transform uppercase
+	font-size 12px
+
+dd
+	margin-bottom 7px
+
+table
+	width 100%
+	max-width 100%
+	margin 0 0 20px 0
+
+th,
+caption
+	background-color $dwhite
+	color $black
+	text-transform uppercase
+	font-weight 600
+	font-size 12px
+	letter-spacing 3px
+
+th,
+td
+	padding 10px 15px
+
+tr:nth-child(odd)
+	background-color lighten($dwhite, 50%)
+
+.alert
+	border-radius 0
+	font-weight 600
+
+label
+	display block
+	margin 0
+	line-height 1em
+	text-transform uppercase
+	font-size 11px
+	line-height 24px
+	font-weight 600
+	letter-spacing 3px
+
+input, textarea, select
+	-moz-appearance none
+	appearance none
+	-webkit-appearance none
+
+input, textarea, select
+	background-color $white
+	display block
+	width 100%
+	box-sizing border-box
+	margin 5px 0 10px
+	border 2px solid $dwhite
+	padding 10px 15px
+	transition border .15s ease 
+	border-radius 0
+	outline none
+	font-family $f1
+	&:focus
+		border 2px solid $black
+
+textarea
+	resize none
+	min-height 220px
+
+
+/*----------------------*/ 
+/*   PAGE TITLE         */ 
+/*----------------------*/
+.page-title
+	padding-top 180px
+	padding-bottom 80px
+	h1
+		font-size 30px
+		text-transform uppercase
+		letter-spacing 1px
+		padding-left 1px
+	p
+		margin 0
+		padding-left 2px
+		text-transform lowercase
+		letter-spacing 2px
+		color $lgray
+
+/*----------------------*/ 
+/*   FOOTER             */ 
+/*----------------------*/
+
+.footer
+	padding 60px 0 40px
+	width 100%
+	.scroll-top
+		margin-top 50px
+	.logo
+		float none
+		display inline-block
+	p.copy
+		margin 30px 0 20px
+	a:hover
+		color $color
+
+
+/*----------------------*/ 
+/*   ELEMENTS           */ 
+/*----------------------*/
+
+@import 'elements/additional.styl'
+@import 'elements/menu.styl'
+@import 'elements/portfolio.styl'
+@import 'elements/gallery.styl'
+@import 'elements/blog.styl'
+@import 'elements/sidebar.styl'
+@import 'elements/page-piling.styl'
+@import 'elements/shortcodes.styl'
