@@ -1,5 +1,5 @@
 // ******************************//
-// Author : VLThemes
+// Author : W.D
 // ******************************//
 
 jQuery.noConflict()(function ($) {
